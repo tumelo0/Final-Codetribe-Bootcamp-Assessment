@@ -1,0 +1,398 @@
+/*!
+ Author: Tumelo Madume
+Design by Tumelo Madume
+ */
+
+:root {
+  --almost-white: hsl(0, 0%, 98%);
+  --medium-gray: hsl(0, 0%, 41%);
+  --almost-black: hsl(0, 0%, 8%);
+}
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+/* Font */
+body {
+  font-family: "Epilogue", sans-serif;
+}
+
+#h1 {
+  font-size: 5.45vw;
+}
+
+.container {
+  margin: 0 auto;
+  width: 90%;
+  overflow: hidden;
+  max-width: 1200px;
+}
+
+/* navigation menu */
+.nav {
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* the line */
+.nav__hamb {
+  width: 30px;
+  height: 50%;
+  background-image: url("../images/icon-menu.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+  z-index: 100;
+  transition: background-image 0.3s;
+}
+
+/* to remove the line 'mobile-only' on screens wider than 768px */
+@media (min-width: 768px) {
+  .nav__hamb {
+      display: none;
+  }
+}
+
+/* to add the line 'mobile-only' on screens smaller than 768px */
+@media (max-width: 767px) {
+  .nav__hamby {
+      display: block;
+  }
+}
+
+.nav__hamburguer--open {
+  background-image: url("../images/icon-close-menu.svg");
+}
+
+.nav__overlay {
+  background-color: #000000a7;
+  position: fixed;
+  inset: 0;
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.3s opacity;
+}
+
+
+.nav__overlay--show {
+  opacity: 1;
+  pointer-events: unset;
+}
+
+.nav__menu {
+  position: absolute;
+  padding: 0;
+  padding: 70px 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 65%;
+  max-width: 400px;
+  background-color: #fff;
+  list-style: none;
+  overflow: auto;
+}
+
+.nav__item {
+  margin: 0 auto;
+  padding: 20px 0;
+  width: 80%;
+  color: var(--medium-gray);
+  cursor: pointer;
+  display: grid;
+  gap: 1.5em;
+}
+
+.nav__item:hover {
+  color: var(--almost-black);
+  background-color: var(--almost-white);
+  cursor: pointer;
+}
+
+
+
+.nav__item:has(.nav__parent) {
+  padding: 0;
+}
+
+.nav__inner {
+  margin: 0 auto;
+  padding: 0;
+  width: 80%;
+  height: 0;
+  display: grid;
+  gap: 1.5em;
+  list-style: none;
+  overflow: hidden;
+  transition: height 0.4s;
+}
+
+/* Container styles */
+.nav__parent {
+  padding: none;
+  display: flex;
+  grid-auto-flow: column;
+  grid-auto-columns: max-content;
+  align-items: center;
+  gap: 0.3em;
+  cursor: pointer;
+}
+  
+/* Arrow icon styles */
+.arrow {
+  transition: transform 0.3s ease;
+  display: none;
+  padding-left: 5px;
+}
+
+.arrow.show {
+  display: inline;
+}
+
+/* Class to rotate the arrow icon upwards */
+.arrow-up {
+  transform: rotate(180deg);
+}
+
+
+
+.nav__link {
+  text-decoration: none;
+  color: var(--medium-gray);
+}
+
+.nav__link:hover {
+  color: var(--almost-black);
+  background-color: var(--almost-white);
+  cursor: pointer;
+}
+
+.nav__login {
+  margin: 0 auto;
+  width: 90%;
+  text-align: center;
+}
+
+.nav__login--border {
+  margin-top: 20px;
+  border-radius: 1em;
+  border: 1px solid var(--medium-gray);
+}
+
+.nav__sign {
+  padding: 0.7em 0;
+  display: inline-block;
+  color: var(--medium-gray);
+  text-decoration: none;
+  
+}
+
+.nav__sign:hover {
+  color: var(--almost-black);
+  background-color: var(--almost-white);
+  cursor: pointer;
+}
+
+
+.main__grid {
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 5% 1fr 5%;
+  grid-template-areas:
+    "img img img"
+    ".   text . ";
+}
+
+.main__article {
+  padding: 56px 0;
+  text-align: center;
+  grid-area: text;
+}
+
+.main__title {
+  font-size: 2rem;
+}
+
+.main__paragraph {
+  color: var(--medium-gray);
+  line-height: 1.5;
+  margin: 1.5em 0;
+}
+
+/* button */
+.learn-more {
+  color: var(--almost-white);
+  background-color: var(--almost-black);
+  border: 1px solid var(--almost-black);
+  color: #fff;
+  display: inline-block;
+  padding: 0.8em 1.5em;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.learn-more:hover {
+  color: var(--almost-black);
+  background-color: var(--almost-white);
+  border: 1px solid var(--almost-black);
+  cursor: pointer;
+}
+
+/* image */
+.main__picture {
+  grid-area: img;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.main__img {
+  width: 100%;
+}
+
+/* brands */
+.main__brands {
+  margin: 40px 0 80px;
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: minmax(30px, 100px);
+  gap: 1em;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.main__brand {
+  width: 100%;
+}
+
+/* navigation menu */
+@media (min-width: 768px) {
+  .nav {
+    padding: 50px 0 0;
+    gap: 2em;
+    overflow: visible;
+    
+  }
+
+  .nav__hamburguer {
+    display: none;
+  }
+
+  .nav__overlay {
+    position: unset;
+    background-color: transparent;
+    opacity: 1;
+    pointer-events: unset;
+    flex: 1;
+  }
+
+  .nav__menu {
+    position: unset;
+    width: 100%;
+    max-width: unset;
+    background-color: unset;
+    padding: 0;
+    overflow: unset;
+    display: flex;
+    align-items: center;
+    gap: 1em;
+  }
+
+  .nav__item {
+    margin: 0;
+    padding: 0;
+    position: relative;
+    width: max-content;
+  }
+
+  /*nav box*/
+  .nav__inner {
+    padding: 0;
+    position: absolute;
+    left: 0;
+    width: max-content;
+    height: auto;
+    padding: 2em;
+    background-color: #fff;
+    z-index: 1000;
+    border-radius: 10px;
+    box-shadow: 0 0 10px 0 rgba(250, 31, 31, 0.363);
+    transition: opacity 0.3s;
+    opacity: 0;
+    pointer-events: none;
+    margin-top: 40px;
+    margin-left: -70px;
+  }
+
+  .nav__inner--show {
+    opacity: 1;
+    pointer-events: unset;
+  }
+
+  .nav__login {
+    margin: 0;
+    margin-left: auto;
+    width: max-content;
+  }
+
+  .nav__login--border {
+    margin: 0;
+    padding: 0 1.5em;
+  }
+
+  .main__grid {
+    margin: 0 auto;
+    padding: 70px 0;
+    width: 90%;
+    max-width: 1200px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "text img";
+    gap: 2em;
+  }
+
+  .main__picture {
+    max-height: 500px;
+  }
+
+  .main__img {
+    height: 100%;
+  }
+
+  .main__article {
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+  }
+
+  .main__brands {
+    margin: auto 0 0 0;
+  }
+
+  .main__texts {
+    margin: auto 0;
+  }
+
+  .main__title {
+    font-size: 3.5rem;
+  }
+
+  .main__paragraph {
+    margin: 2em 0;
+  }
+}
+
+/* Licensed under CC BY */
+.attribution { 
+  font-size: 11px; 
+  text-align: center; 
+}
+      
+.attribution a { 
+  color: hsl(228, 45%, 44%); 
+}
+
+

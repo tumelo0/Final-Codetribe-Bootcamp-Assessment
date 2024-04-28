@@ -1,0 +1,163 @@
+<!--
+ Author: Tumelo Madume
+Design by Tumelo Madume
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    
+    <title>Frontend Mentor | Intro section with dropdown navigation</title>
+
+    <!-- Link Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&display=swap"rel="stylesheet"/>
+
+    <!-- Link Css -->
+    <link rel="stylesheet" href="./styles/index.css" />
+    
+  </head>
+
+  <body>
+      <!-- strat of navigation menu -->
+      <nav class="nav container">
+        <img src="./images/logo.svg" class="nav__img" />
+
+        <div class="nav__hamb"></div>
+
+        <div class="nav__overlay">
+          <ul class="nav__menu">
+            <li class="nav__item">
+              <span id="features" class="nav__parent" > Features 
+                <img src="./images/icon-arrow-down.svg" class="nav__arrow" class="arrow"
+                alt="arrow down"/>
+
+                <img src="./images/icon-arrow-up.svg" class="arrow"
+                alt="arrow up"
+                 />
+              </span>
+
+              <ul class="nav__inner">
+                <li class="nav__dropdown">
+                  <a href="#" class="nav__link"> 
+                    <img src="./images/icon-todo.svg" class="nav__illustration" /> Todo List </a>
+                </li>
+
+                <li class="nav__dropdown">
+                  <a href="#" class="nav__link"> 
+                    <img src="./images/icon-calendar.svg" class="nav__illustration" /> Calendar </a>
+                </li>
+
+                <li class="nav__dropdown">
+                  <a href="#" class="nav__link">
+                    <img src="./images/icon-reminders.svg" class="nav__illustration" /> Reminder </a>
+                </li>
+
+                <li class="nav__dropdown">
+                  <a href="#" class="nav__link">
+                    <img src="./images/icon-planning.svg" class="nav__illustration" /> Planning </a>
+                </li>
+              </ul>
+            </li>
+         
+            <li class="nav__item">
+              <div id="Company" class="nav__parents" > Company 
+                <img src="./images/icon-arrow-down.svg" class="nav__arrows" class="arrow"
+                alt="arrow down"/>
+
+                <img src="./images/icon-arrow-up.svg" class="arrow"
+                alt="arrow up"
+                 />
+              </div>
+              
+              <ul class="nav__inner">
+                <li class="nav__dropdown">
+                  <a href="#" class="nav__link">History</a>
+                </li>
+
+                <li class="nav__dropdown">
+                  <a href="#" class="nav__link">Our Team</a>
+                </li>
+
+                <li class="nav__dropdown">
+                  <a href="#" class="nav__link">Blog</a>
+                </li>
+              </ul>
+            </li>
+
+            <li class="nav__item">
+              <a href="#" class="nav__link">Careers</a>
+            </li>
+
+            <li class="nav__item">
+              <a href="#" class="nav__link">About</a>
+            </li>
+
+            <li class="nav__login">
+              <a href="#" class="nav__sign">Login</a>
+            </li>
+
+            <li class="nav__login nav__login--border">
+              <a href="#" class="nav__sign">Register</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <!-- End of navigation menu -->
+
+      <main class="main">
+        <section class="main__grid">
+
+          <!-- strat of image -->
+          <picture class="main__picture">
+            <source
+              srcset="./images/image-hero-desktop.png"
+              class="main__img"
+              media="(min-width:768px)"
+            />
+            <img src="./images/image-hero-mobile.png" class="main__img" />
+          </picture>
+          <!-- End of image -->
+
+          <article class="main__article">
+            <div class="main__texts">
+              <h1 id="h1" class="main__title">Make <br>remote work</h1>
+              <p class="main__paragraph">
+                Get your team in sync, no matter your location. <br>Streamline
+                processes, create team rituals, and <br>watch productivity soar.
+              </p>
+              <a href="#" button class="learn-more">Learn more</a> <!-- Learn more button-->
+            </div>
+
+            <!-- Strat of brands -->
+            <div class="main__brands">
+              <img src="./images/client-databiz.svg" class="main__brand" />
+              <img src="./images/client-audiophile.svg" class="main__brand" />
+              <img src="./images/client-meet.svg" class="main__brand" />
+              <img src="./images/client-maker.svg" class="main__brand" />
+            </div>
+            <!-- End of brands -->
+          </article>
+        </section>
+      </main>
+
+      <!-- Licensed under CC BY -->
+     <div class="attribution">
+      Bootcamp 2024 by
+      <a href="https://www.mlab.co.za" target="_blank">CodeTribe</a>. Developed
+      by <a href="https://bootcamplesson3.firebaseapp.com/">Tumelo Madume</a>.
+     </div>
+
+        <!-- Link Js -->
+        <script src="./js/menu.js"></script>
+
+  </body>
+</html>
+
+<!-- Source Frontend Mentor: https://www.frontendmentor.io -->
